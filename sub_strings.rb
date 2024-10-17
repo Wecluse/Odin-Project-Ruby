@@ -5,6 +5,9 @@ def substrings(word, dictionary)
             matches = text.scan(sub.downcase).size # size method returns the number of matches found
             result[sub] += matches if matches > 0 # Increment count
         end
-    end
     result
 end
+
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+puts substrings("below", dictionary).inspect
+puts substrings("Howdy partner, sit down! How's it going?", dictionary).inspect
